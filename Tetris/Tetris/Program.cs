@@ -10,7 +10,7 @@ namespace Tetris
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("12");
+            Console.WriteLine("12911111");
         }
     }
 }
