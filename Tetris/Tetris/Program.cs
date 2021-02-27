@@ -15,7 +15,11 @@ namespace Tetris
             Console.SetBufferSize(40, 30);
 
 
-            Square s = new Square(2, 5, '*');
+            Figure s = new Stick(20, 5, '*');
+            s.Draw();
+            Thread.Sleep(500);
+            s.Hide();
+            s.Rotate();
             s.Draw();
 
             Thread.Sleep(500);
@@ -41,6 +45,11 @@ namespace Tetris
             Thread.Sleep(500);
             s.Hide();
             s.Move(Direction.RIGHT);
+            s.Draw();
+
+            Thread.Sleep(500);
+            s.Hide();
+            s.Rotate();
             s.Draw();
 
             Console.ReadLine();
