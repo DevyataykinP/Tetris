@@ -70,6 +70,10 @@ namespace Tetris
             }
         }
 
+        internal bool IsOnTop()
+        {
+            return Points[0].Y == 0;
+        }
 
         internal Result TryRotate()
         {
