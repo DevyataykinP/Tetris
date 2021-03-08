@@ -10,7 +10,6 @@ namespace Tetris
 {
     class Program
     {
-
         const int TIMER_INTERVAL = 500;
         static System.Timers.Timer timer;
         static private Object _lockObject = new object();
@@ -22,6 +21,10 @@ namespace Tetris
         {
             Console.SetWindowSize(Field.Width, Field.Height);
             Console.SetBufferSize(Field.Width, Field.Height);
+
+
+            IDrawer drawer = new ConsoleDrawer2();
+            Test(drawer);
 
             
             generator = new FigureGenerator(Field.Width/2, 0, Drawer.DEFAULT_SYMBOL);
@@ -40,6 +43,11 @@ namespace Tetris
                 }
             }
         
+        }
+
+        private static void Test(IDrawer drawer)
+        {
+            DrawerProvier.Drawer.DrawPoint(5, 6);
         }
 
         private static bool ProcessResult(Result result, ref Figure currentFigure)
