@@ -21,5 +21,22 @@ namespace Tetris
             Console.Write(' ');
             Console.SetCursorPosition(0, 0);
         }
+
+        public void InitField()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void WriteGameOver()
+        {
+            Console.SetCursorPosition(Field.Width / 2 - 8, Field.Height / 2);
+            Console.WriteLine("G A M E     O V E R");
+        }
+
+        void IDrawer.WriteGameOver()
+        {
+            Console.SetWindowSize(Field.Width, Field.Height);
+            Console.SetBufferSize(Field.Width, Field.Height);
+        }
     }
 }

@@ -19,25 +19,12 @@ namespace Tetris
             {
                 return _width;
             }
-            set
-            {
-                _width = value;
-                Console.SetWindowSize(_width, Field.Height);
-                Console.SetBufferSize(_width, Field.Height);
-            }
-
         }
         public static int Height
         {
             get
             {
                 return _height;
-            }
-            set
-            {
-                _width = value;
-                Console.SetWindowSize(value, Field.Height);
-                Console.SetBufferSize(value, Field.Height);
             }
         }
 
